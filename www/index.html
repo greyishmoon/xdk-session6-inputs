@@ -22,13 +22,37 @@
     <script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
 
     <script src="cordova.js"></script>          <!-- phantom library, needed for Cordova api calls, added during build -->
-    <script src="js/app.js"></script>           <!-- recommended location of your JavaScript code relative to other JS files -->
+    <script src="js/app.js"></script>            <!-- recommended location of your JavaScript code relative to other JS files -->
+<!--    <script src="js/index.js"></script>-->
     <script src="xdk/init-dev.js"></script>     <!-- normalizes device and document ready events, see README for details -->
 </head>
 
 <body>
 
-    <p>Hello, Cordova!</p>
+<div data-role="page" id="pageone">
+        
+ 	<div data-role="header">Header</div>
+        
+  	<div role="main" class="ui-content">
+    
+  		<input type="text" id="textinput" value=""  />
+  	    
+        <!-- REMOVED BUTTON      
+        Not unobtrusive javascript as has direct reference to JS function - see:
+        http://stackoverflow.com/questions/259614/unobtrusive-javascript-with-jquery-good-10-minute-tutorial
+        https://en.wikipedia.org/wiki/Unobtrusive_JavaScript
+        
+        <button onClick="submitText()">Submit A</button> 
+        -->
+        
+        
+  	    <button id="submitButton">Submit</button>
+
+    </div>
+        
+    <div data-role="footer">Footer</div>
+    
+</div>
 
 </body>
 </html>
